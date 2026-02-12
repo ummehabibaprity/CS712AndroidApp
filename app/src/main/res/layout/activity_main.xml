@@ -23,14 +23,27 @@
 
     <Button
         android:id="@+id/btnExplicit"
-        android:text="Start Activity Explicitly"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Start Activity Explicitly" />
 
     <Button
         android:id="@+id/btnImplicit"
-        android:text="Start Activity Implicitly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        android:text="Start Activity Implicitly" />
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="Start Service" />
+
+    <Button
+        android:id="@+id/btnSendBroadcast"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="Send Broadcast" />
+
+
 </LinearLayout>

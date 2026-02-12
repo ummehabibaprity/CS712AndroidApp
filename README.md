@@ -29,6 +29,24 @@ This Android app was developed as part of CS712 Assignment 2. It demonstrates th
 - **Language** Java
 - **Build System** Gradle (KTS-based)
 
+## Assignment 3 Update
+
+This version extends the app with:
+
+- Foreground Service with notification
+- Dynamic Broadcast Receiver
+- Custom broadcast action handling
+
+### Features
+- Start Service → Shows notification "Foreground service has started"
+- Send Broadcast → Displays toast "Broadcast received!"
+- Broadcast receiver registered dynamically in MainActivity
+- Receiver unregistered in onStop()
+
+### Tested Environment
+Android Version: Android 13
+& Device: Samsung Galaxy S22 5G
+
 ##  How to Run
 Clone the repository:
 ```bash

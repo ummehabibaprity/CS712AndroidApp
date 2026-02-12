@@ -1,31 +1,46 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cs712assignment2">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+
+
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="CS712Assignment2"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:label="CS712AndroidApp"
         android:theme="@style/Theme.CS712Assignment2">
 
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondActivity"
+        <activity
+            android:name=".SecondActivity"
             android:exported="true">
+
             <intent-filter>
-                <action android:name="com.example.ACTION_VIEW_CHALLENGES" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.example.ACTION_VIEW_CHALLENGES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+
         </activity>
+
+
+        <service
+            android:name=".MyForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync|connectedDevice" />
+
+
+
+
 
     </application>
 
