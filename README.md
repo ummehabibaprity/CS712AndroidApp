@@ -47,6 +47,10 @@ This version extends the app with:
 Android Version: Android 13
 & Device: Samsung Galaxy S22 5G
 
+## Assignment 4 Update
+- Manifest Configuration reuse 
+- Selected attribute- android:launchMode="singleTask" on MainActivity
+- Effect: If MainActivity is already running, Android will reuse it instead of creating a second copy. This helps prevent duplicate MainActivity screens in the back stack.
 ##  How to Run
 Clone the repository:
 ```bash

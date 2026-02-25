@@ -1,23 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cs712assignment2">
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-
-
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
         android:label="CS712AndroidApp"
         android:theme="@style/Theme.CS712Assignment2">
 
-        <activity android:name=".MainActivity"
-            android:exported="true">
+        <!--  Assignment 4 reuse: launchMode -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -26,22 +27,15 @@
             android:exported="true">
 
             <intent-filter>
-                <action android:name="com.example.ACTION_VIEW_CHALLENGES"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.example.ACTION_VIEW_CHALLENGES" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-
 
         <service
             android:name=".MyForegroundService"
             android:exported="false"
-            android:foregroundServiceType="dataSync|connectedDevice" />
-
-
-
-
+            android:foregroundServiceType="dataSync" />
 
     </application>
-
 </manifest>
