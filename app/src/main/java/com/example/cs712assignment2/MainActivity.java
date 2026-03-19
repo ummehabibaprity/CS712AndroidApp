@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private MyBroadcastReceiver receiver;
     private boolean receiverRegistered = false;
 
-    Button btnExplicit, btnImplicit;
+    Button btnExplicit, btnImplicit, btnImageActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnExplicit = findViewById(R.id.btnExplicit);
         btnImplicit = findViewById(R.id.btnImplicit);
+        btnImageActivity = findViewById(R.id.btnImageActivity);
 
         // Explicit Intent
         btnExplicit.setOnClickListener(v -> {
@@ -34,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         // Implicit Intent
         btnImplicit.setOnClickListener(v -> {
             Intent intent = new Intent("com.example.ACTION_VIEW_CHALLENGES");
+            startActivity(intent);
+        });
+        // Open Third Activity
+        btnImageActivity.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
             startActivity(intent);
         });
         Button btnStartService = findViewById(R.id.btnStartService);

@@ -51,7 +51,16 @@ Android Version: Android 13
 - Manifest Configuration reuse 
 - Selected attribute- android:launchMode="singleTask" on MainActivity
 - Effect: If MainActivity is already running, Android will reuse it instead of creating a second copy. This helps prevent duplicate MainActivity screens in the back stack.
-##  How to Run
+## Assignment 5 Update
+- A new 5th button in Main Activity: View Image Activity
+- A new ThirdActivity
+- Camera functionality using an intent
+- Display of the captured image inside ThirdActivity
+- Runtime camera permission handling for real-device support
+### Tested Environment
+- **Device:** Samsung Galaxy S22 5G
+- **Android Version:** Android 13
+###  How to Run
 Clone the repository:
 ```bash
 git clone https://github.com/ummehabibaprity/CS712AndroidApp.git

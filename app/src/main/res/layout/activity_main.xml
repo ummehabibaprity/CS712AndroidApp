@@ -45,5 +45,11 @@
         android:layout_height="wrap_content"
         android:text="Send Broadcast" />
 
+    <Button
+        android:id="@+id/btnImageActivity"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="View Image Activity" />
+
 
 </LinearLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CS712Assignment2</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="captured_image">Captured Image</string>
 </resources>
