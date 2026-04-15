@@ -60,6 +60,18 @@ Android Version: Android 13
 ### Tested Environment
 - **Device:** Samsung Galaxy S22 5G
 - **Android Version:** Android 13
+
+## Assignment 6 Update
+- Added an automated UI test using **UI Automator**
+- The test launches the app, clicks **Start Activity Explicitly**, and verifies content in `SecondActivity`
+- Verified at least one listed mobile software engineering challenge is displayed
+
+### Verified Challenge Examples
+- Device Fragmentation
+- Battery Optimization
+- App Lifecycle Complexity
+- Security and Privacy
+- Rapid SDK Updates
 ###  How to Run
 Clone the repository:
 ```bash
