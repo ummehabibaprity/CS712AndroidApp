@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cs712assignment2">
 
+    <permission
+        android:name="com.example.cs712assignment2.MSE712"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="com.example.cs712assignment2.MSE712" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -15,30 +21,29 @@
         android:label="CS712AndroidApp"
         android:theme="@style/Theme.CS712Assignment2">
 
-        <!-- Assignment 4 reuse: launchMode -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SecondActivity"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.example.cs712assignment2.MSE712">
             <intent-filter>
                 <action android:name="com.example.ACTION_VIEW_CHALLENGES" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ThirdActivity"
             android:exported="false" />
-
 
         <service
             android:name=".MyForegroundService"

@@ -72,6 +72,14 @@ Android Version: Android 13
 - App Lifecycle Complexity
 - Security and Privacy
 - Rapid SDK Updates
+
+## Assignment 7 Update
+This version extends the app with:
+
+- A custom dangerous permission named `com.example.cs712assignment2.MSE712`
+- Protection of the exported `SecondActivity` using the custom permission
+- Runtime permission request in `MainActivity` before opening `SecondActivity`
+
 ###  How to Run
 Clone the repository:
 ```bash
